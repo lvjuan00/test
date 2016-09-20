@@ -1,0 +1,56 @@
+.container{
+   width: 1000px;
+   height: 1000px;
+   border: 1px solid #ccc;
+   margin: 0 auto;
+}
+
+/*边线颜色*/
+div.orgChart tr.lines td.left {
+    border-right: 1px solid #e0cfcf;
+}
+
+div.orgChart tr.lines td.right {
+    border-left: 1px solid #e2d9d9;
+}
+
+div.orgChart tr.lines td.top {
+    border-top: 2px solid #e0d6d6;
+}
+
+/*附属节点 虚线*/
+div.orgChart div.adjunct-link{
+	border: 1px dashed #ccc;
+}
+/*改节点样式*/
+div.orgChart div.node{
+	border: 1px solid #ccc;
+	box-shadow: none;
+	width: 100px;
+	height: 30px;
+}
+
+div.orgChart div.node.level0{
+	background-color: #efefef;
+}
+div.orgChart div.node.level0.adjunct{
+	background-color: #fff;
+	height: 30px;
+}
+div.orgChart div.node.level1{
+	background-color: #16f1de;
+}
+div.orgChart div.node.level1-node1{
+	background-color: #f00;
+}
+div.orgChart div.node.level2.hasChildren{
+	background-color: #e3e;
+}
+/*表示这个节点的子节点显示时候的样式*/
+/*div.orgChart div.node.level2.shownChildren{ 
+	background-color:#f00;
+}*/
+/*表示这个节点的子节点隐藏时候的样式*/
+/*div.orgChart div.node.level2.hiddenChildren{ 
+	background-color: #f00;
+}*/

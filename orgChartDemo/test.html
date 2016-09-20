@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>组织架构</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="jquery.orgchart.css">
+        <link rel="stylesheet" type="text/css" href="test.css">
+
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="jquery.orgchart.js"></script>
+
+    </head>
+
+    <body>
+
+        <!--数据结构start-->
+        <ul id="ui-source" style="display:none;">
+            <li>web <adjunct>Name</adjunct>
+                <ul>
+                    <li data-info="ssss">resources
+                        <ul>
+                            <li>views</li>
+                            <li>lang</li>
+                            <li>assets</li>
+                        </ul>
+                    </li>
+                    <li>public
+                        <ul>
+                            <li>images
+                                <ul>
+                                    <li>img1</li>
+                                    <li>img2</li>
+                                    <li>img3</li>
+                                </ul>
+                            </li>
+                            <li>js</li>
+                            <li>css</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!--数据结构end-->
+        <div class="container">
+            <div id="chart">
+               
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(function(){
+
+               $('#ui-source').orgChart({
+                container: $("#chart"),
+                /*interactive: true,
+                showLevels: 3 ,*///从1开始
+                nodeClicked: onNodeClicked  //不包括附属节点
+               })
+
+
+               function onNodeClicked($node, $view){
+                console.log($node); // 表示数据结构 
+                console.log($view); // 表示展示的dom结构
+                //var val=$node.clone().children("ul,li").remove().end().text(); //获取到节点的值
+                //alert(val);
+/*                var data=$node.data('info');
+                if(data){
+                    alert(data);
+                }*/
+/*                 if($node.hasChild('ul')){
+
+                 }*/
+               }
+            })
+        </script>
+    </body>
+</html>
